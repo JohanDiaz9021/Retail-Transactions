@@ -4,6 +4,7 @@ DataSet/
 data/bronze/
 data/silver/
 data/gold/
+*.zip
 # Catch-all por si quedan datos sueltos en cualquier carpeta
 *.csv
 *.parquet
