@@ -1,7 +1,5 @@
 services:
   - type: web
     name: retail-transactions
-    runtime: python
-    buildCommand: pip install -r requirements-app.txt
-    startCommand: bash start-render.sh
+    env: docker
     healthCheckPath: /_stcore/health
