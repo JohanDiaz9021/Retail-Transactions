@@ -234,17 +234,7 @@ else:
     store_where = "1=0"
 date_where = f"date between DATE '{date_min}' and DATE '{date_max}'"
 
-page = st.sidebar.radio(
-    "📋 Sección",
-    options=[
-        "Panel General",
-        "Gráficos Interactivos",
-        "Perfiles de Cliente",
-        "Sugerencias de Productos",
-        "Procesar Datos",
-    ],
-    index=0,
-)
+page = "Panel General"
 
 
 # ============================================================
@@ -917,18 +907,17 @@ with tab_c:
 # ============================================================
 # Página 5 — Procesar Datos (ingesta incremental)
 # ============================================================
-if page == "Procesar Datos":  # "Procesar Datos"
-    import json
-    import subprocess
-    import sys
+import json
+import subprocess
+import sys
 
-    st.title("Procesar Datos")
-    st.caption("Incorporación de nuevos datos (RF-8). Sube un archivo o lanza el "
-            "pipeline manualmente cuando hayas dejado nuevos CSV en `data/landing/`.")
+st.title("Procesar Datos")
+st.caption("Incorporación de nuevos datos (RF-8). Sube un archivo o lanza el "
+        "pipeline manualmente cuando hayas dejado nuevos CSV en `data/landing/`.")
 
-    LANDING = ROOT / "data" / "landing"
-    LANDING_TX = LANDING / "Transactions"
-    LANDING_PROD = LANDING / "Products"
+LANDING = ROOT / "data" / "landing"
+LANDING_TX = LANDING / "Transactions"
+LANDING_PROD = LANDING / "Products"
 
 st.subheader("Estado del manifest")
 manifest_path = LANDING / "_manifest.json"
