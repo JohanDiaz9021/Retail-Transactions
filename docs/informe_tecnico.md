@@ -388,8 +388,6 @@ python -m src.pipeline.run --step models
 ---
 
 **Anexos:**
-- [Documento de arquitectura](arquitectura.md)
-- [Resumen ejecutivo](resumen_ejecutivo.md)
 - Código fuente: `src/pipeline/{bronze,silver,gold,models,ingest,run,spark_session,paths}.py`
 - Dashboard: `app/streamlit_app.py`
 - Makefile con targets `install`, `pipeline`, `bronze`, `silver`, `gold`, `models`, `ingest-check`, `ingest`, `app`, `clean`
